@@ -246,39 +246,8 @@
 
 
             <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title text-capitalize text-primary">power consumption details</h4>
-                        <hr class = "bg-primary">
-      
-                        <p class="card-description">
-                          Power consumed per day: <span></span>
-                        </p>
-                        <p class="card-description">
-                          Amount: <span></span>
-                        </p>
-      
-                        <h4 class = "text-capitalize font-weight-bolder text-primary">previous month</h4>
-                        <hr class = "bg-primary">
-                        <p class="card-description text-capitalize">
-                          power consumption: <span></span>
-                        </p>
-                        <p class="card-description text-capitalize">
-                          total amount: <span></span>
-                        </p>
-                        <p class = "text-capitalize text-success">expected power consumption: <span></span></p>
-                        <p class = "text-capitalize text-success">expected unit: <span></span></p>
-
-
-
-                        <hr>
-
-               
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 grid-margin stretch-card">
+        
+                  <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
       
                       <div class="card-body">
@@ -289,25 +258,25 @@
 
                         <div class="col-lg-12 mx-auto">
                             
-                            <div class="row mt-100">
-                                <div class="col-md-6 text-center">
+                            <div class="row mt-100" style = "max-height:100vh; height:300px">
+                                <div class="col-md-6 text-center justify-content-center" style = "position:relative;">
                                     <h4 class = "text-primary text-center" style = "font-weight:900;">MONTHLY</h4>
                                     <p>Set Limit: <span id = "month-limit">32 kU</span></p>
-                                 <a href="">
+                                 <a href="" class = "">
 
-                                    <div class="progresss blue"> <span class="progresss-left"> <span class="progresss-bar"></span> </span> <span class="progresss-right"> <span class="progresss-bar"></span> </span>
+                                    <div class="progresss blue" style = "margin:0 auto;position:absolute;left:50%;top:50%; transform:translate(-50%, -50%);"> <span class="progresss-left"> <span class="progresss-bar"></span> </span> <span class="progresss-right"> <span class="progresss-bar"></span> </span>
                                         <div class="progresss-value">90%</div>
                                     </div>
                                   
                                  </a>
                                 </div>
                 
-                                <div class="col-md-6 text-center">
+                                <div class="col-md-6 text-center" style = "position:relative;">
                                     <h4 class = "text-warning text-center" style = "font-weight:900;">TODAY</h4>
                                     <p>Set Limit: <span id = "daily-limit">1 kU</span></p>
                 
-                                  <a href="./consumptionDetails.html">
-                                    <div class="progresss yellow text-center"> <span class="progresss-left"> <span class="progresss-bar"></span> </span> <span class="progresss-right"> <span class="progresss-bar"></span> </span>
+                                  <a href="">
+                                    <div class="progresss yellow text-center" style = "position:absolute; left:50%;top:50%; transform:translate(-50%, -50%);"> <span class="progresss-left"> <span class="progresss-bar"></span> </span> <span class="progresss-right"> <span class="progresss-bar"></span> </span>
                                         <div class="progresss-value">37.5%</div>
                                     </div>
                                   </a>
@@ -321,12 +290,61 @@
                   </div>
             </div>
 
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="set in kU(kWh)">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary"onclick = "setMonth()">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputPassword2" placeholder="set in units(Wh)">
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick = "setDay()">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             <div class="row">
 
                 <div class="col-md-12">
 
-                    <button class="btn btn-primary" style = "font-weight:bolder;" onclick = "window.location.href = 'consumptionDetails.html'">Detailed Report</button>
+                    <button type="button" class="btn btn-outline-primary"style = "font-weight:bolder;" data-toggle="modal" data-target="#exampleModal1">
+                        Set Monthly limit
+                      </button>
+                    <button type="button" class="btn btn-outline-primary"style = "font-weight:bolder;" data-toggle="modal" data-target="#exampleModal2">
+                        Set Daily limit
+                      </button>
+               
                 </div>
             </div>
 
@@ -354,6 +372,28 @@
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+
+        function setMonth(){
+const eg1 = document.getElementById('exampleInputPassword1');
+document.getElementById('month-limit').innerHTML = eg1.innerHTML;
+
+
+
+        }
+
+        function setDay(){
+const eg2 = document.getElementById('exampleInputPassword2');
+document.getElementById('daily-limit').innerHTML = eg2.innerHTML;
+
+
+
+        }
+    </script>
     <!-- <script src="js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->
   </body>
