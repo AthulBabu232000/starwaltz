@@ -54,36 +54,12 @@
         <div class="navbar-menu-wrapper d-flex align-items-top"> 
           <ul class="navbar-nav">
             <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-              <h1 class="welcome-text">Greetings, <span class="text-black fw-bold">Name</span></h1>
-              <h3 class="welcome-sub-text">Commercial sector <span id = 'consumer-id' class = "font-weight-bolder text-dark" style = "font-weight:bolder">#consumerID</span></h3>
+              <h1 class="welcome-text">Sub-station, <span class="text-black fw-bold">5</span></h1>
+              <h3 class="welcome-sub-text">Admin <span id = 'consumer-id' class = "font-weight-bolder text-dark" style = "font-weight:bolder">#refID</span></h3>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown d-none d-lg-block">
-              <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Meter</a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
-                <a class="dropdown-item py-3" >
-                  <p class="mb-0 font-weight-medium float-left">Select meter</p>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-item-content flex-grow py-2">
-                    <p class="preview-subject ellipsis font-weight-medium text-dark">Meter 1</p>
-                    <p class="fw-light small-text mb-0">Floor no 5</p>
-                    
-                  
-                  </div>
-                </a>
-            
-                <a class="dropdown-item preview-item">
-                    <div class="preview-item-content flex-grow py-2">
-                      <p class="preview-subject ellipsis font-weight-medium text-dark">Meter 2</p>
-                      <p class="fw-light small-text mb-0">Floor no 4</p>
-                    </div>
-                  </a>
-            
-              </div>
-            </li>
+
             <li class="nav-item d-none d-lg-block">
               <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                 <span class="input-group-addon input-group-prepend border-right">
@@ -92,6 +68,13 @@
                 <input type="text" class="form-control">
               </div>
             </li>
+
+            <li class="nav-item">
+                <form class="search-form" action="#">
+                  <i class="icon-search"></i>
+                  <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                </form>
+              </li>
          
             <li class="nav-item dropdown">
             
@@ -228,73 +211,127 @@
         <!-- partial -->
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title">LOG OUT</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./self.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title  text-capitalize">self analysis</span>
-              </a>
-            </li>
-         
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">
+                  <i class="mdi mdi-grid-large menu-icon"></i>
+                  <span class="menu-title">LOG OUT</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./dom.html">
+                  <i class="mdi mdi-grid-large menu-icon"></i>
+                  <span class="menu-title  text-capitalize">Domestic Houses</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./edu.html">
+                    <i class="mdi mdi-grid-large menu-icon"></i>
+                    <span class="menu-title  text-capitalize">
+                        Educational Institution
+                    </span>
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="./hos.html">
+                    <i class="mdi mdi-grid-large menu-icon"></i>
+                    <span class="menu-title  text-capitalize">Hospitals</span>
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="./mac.html">
+                    <i class="mdi mdi-grid-large menu-icon"></i>
+                    <span class="menu-title  text-capitalize">Machinery</span>
+                  </a>
+                </li>
            
-          </ul>
-        </nav>
+             
+            </ul>
+          </nav>    
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
 
-
-
             <div class="row">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title text-capitalize text-primary">power consumption details</h4>
-                        <hr class = "bg-primary">
-      
-                        <p class="card-description">
-                          Power consumed per day(kU): <span>2</span>
-                        </p>
-                        <p class="card-description">
-                          Amount(₹): <span>100</span>
-                        </p>
-      
-                        <h4 class = "text-capitalize font-weight-bolder text-primary">previous month</h4>
-                        <hr class = "bg-primary">
-                        <p class="card-description text-capitalize">
-                          power consumption: <span>20</span>
-                        </p>
-                        <p class="card-description text-capitalize">
-                          total amount(₹): <span>1000</span>
-                        </p>
-                        <p class = "text-capitalize text-success">expected power consumption in 3 months: <span>3150</span></p>
-                        <p class = "text-capitalize text-success">expected unit: <span>63</span></p>
+       <div class="card-body">
 
-
-
-                        <hr>
-
-               
-                      </div>
+        <p class="card-title">Total Power Consumed</p>
+        <hr>
+        <p class="card-description">
+            Estimated Unit: 200kU</p>
+        <button class="btn btn-outline-danger">Estimated Cost(₹): 1,00,000</button>
+       </div>
                     </div>
                   </div>
    
             </div>
 
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+       <div class="card-body">
+
+        <p class="card-title">#consumer ID1</p>
+        <p class="card-description">estimated Unit: 200kU</p>
+        <button class="btn btn-outline-danger">Notify</button>
+       </div>
+                    </div>
+                  </div>
+   
+            </div>
 
             <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
 
-                <div class="col-md-12">
+                            <p class="card-title">#consumer ID2</p>
+                            <p class="card-description">estimated Unit: 250kU</p>
+        <button class="btn btn-outline-danger">Notify</button>
 
-                    <button class="btn btn-primary" style = "font-weight:bolder;" onclick = "window.location.href = 'consumptionDetails.html'">Detailed Report</button>
-                </div>
+                        </div>
+       
+                    </div>
+                  </div>
+   
             </div>
+
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <p class="card-title">#consumer ID3</p>
+                            <p class="card-description">estimated Unit: 250kU</p>
+        <button class="btn btn-outline-danger">Notify</button>
+
+                        </div>
+       
+                    </div>
+                  </div>
+   
+            </div>
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <p class="card-title">#consumer ID4</p>
+                            <p class="card-description">estimated Unit: 250kU</p>
+        <button class="btn btn-outline-danger">Notify</button>
+
+                        </div>
+       
+                    </div>
+                  </div>
+   
+            </div>
+
+          
 
 
            
